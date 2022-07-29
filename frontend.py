@@ -5,7 +5,7 @@ from tensorflow import keras
 import cv2
 import numpy as np
 
-st.title("MNIST Digit Recognizer")
+st.title("MY_MNIST Digit Recognizer")
 
 SIZE = 192
 

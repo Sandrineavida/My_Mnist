@@ -1,3 +1,12 @@
+## backend:
+`uvicorn backen:app --reload`
+## frontend:
+`streamlit run frontend.py`
+
+
+
+
+
 # Building a Machine Learning Web Application
 
 ## Bilibili videos

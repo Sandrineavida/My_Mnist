@@ -6,7 +6,7 @@ import numpy as np
 
 app = FastAPI()
 
-model_new = keras.models.load_model('mnist.hdf5')
+model_new = keras.models.load_model('my_mnist.hdf5')
 
 
 # define a root `/` endpoint
@@ -21,7 +21,7 @@ async def predict(img: UploadFile = File(...)):
     nparr = np.fromstring(contents, np.uint8)
     img_color = cv2.imdecode(nparr, cv2.IMREAD_COLOR)
     img_grey = cv2.cvtColor(img_color, cv2.COLOR_BGR2GRAY)
-    pred = model_new.predict(img_grey.reshape(1, 28, 28, 1))
+    pred = model_new.predict(img_grey.reshape(1,784))
     return {"result": float(np.argmax(pred[0])), "percent": pred[0].tolist()}
 
 

@@ -31,6 +31,6 @@ if canvas_result.image_data is not None:
     
 if st.button('Predict'):
     img_grey = cv2.cvtColor(img_color, cv2.COLOR_BGR2GRAY)
-    pred = model_new.predict(img_grey.reshape(1, 28, 28, 1))
+    pred = model_new.predict(img_grey.reshape(1, 28,28))
     st.write(f'result: {np.argmax(pred[0])}')
     st.bar_chart(pred[0])
