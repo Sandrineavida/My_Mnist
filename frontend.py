@@ -27,7 +27,7 @@ if canvas_result.image_data is not None:
     st.image(img_rescaling)
 
 if st.button('Predict'):
-    url = 'http://localhost:8000/predict/'
+    url = 'http://124.222.14.221:8000/predict/'
     data_sent = cv2.imencode('.png', img_color)[1].tobytes()
     files = {'img': data_sent}
     response = requests.post(url, files=files)
