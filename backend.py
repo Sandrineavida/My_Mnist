@@ -6,7 +6,7 @@ import numpy as np
 
 app = FastAPI()
 
-model_new = keras.models.load_model('my_mnist.hdf5')
+model_new = keras.models.load_model('let5_mnist.hdf5')
 
 
 # define a root `/` endpoint
